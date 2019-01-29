@@ -1,0 +1,1 @@
+/home/tino/.oh-my-zsh/custom/aliases/aliases_general.zsh
