@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/tino/.oh-my-zsh"
+  export ZSH="$HOME/.oh-my-zsh"
 # export PATH="/home/tino/anaconda3/bin:$PATH:$HOME/.local/bin"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -98,6 +98,6 @@ source $ZSH/oh-my-zsh.sh
 #
 
 # source /home/tino/.oh-my-zsh/custom/aliases/aliases.zsh
-for file in /home/tino/.aliases/*; do 
+for file in $HOME/.aliases/*; do 
     source "$file"
 done

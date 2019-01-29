@@ -6,6 +6,7 @@ alias vzp="vim ~/.zshrc"
 alias vzt="vim ~/.oh-my-zsh/themes/tino.zsh-theme"
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias xo="xdg-open"
+alias setup="cd ~/gitRepos/cvonsteg/setups"
 
 # Functions
 function nwl () {
