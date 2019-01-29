@@ -1,7 +1,7 @@
 alias py="python3"
 alias vzp="vim ~/.zshrc"
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
-alias pyignore="python -W ignore"
+alias pyw="python -W ignore"
 
 function nwl () {
     nosetests --nocapture $1
