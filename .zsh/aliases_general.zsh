@@ -46,12 +46,13 @@ function venv() {
 }
 
 function pykernel() {
-    if [[ "$VIRTUAL_ENV" == "" ]]
+    if [ ! -a "$VIRTUAL_ENV" ]
     then 
         venv .venv
     fi
+    default_name=${PWD##*/}
     pip install ipykernel
-    ipython kernel install --user --name=$1
+    ipython kernel install --user --name=${1:-$default_name}
 }
 
 
