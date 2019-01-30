@@ -26,7 +26,7 @@ function copycat () {
 
 function init_venv() {
   venv_dir=$1
-  python3 -m venv "$venv_dir"
+  python3.7 -m venv "$venv_dir"
   venv "$venv_dir"
   pip install wheel
   if [ -f requirements.txt ]; then
