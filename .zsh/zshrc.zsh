@@ -1,3 +1,9 @@
+# # # # # # # # # # # # IMPORTANT # # # # # # # # # # # # # # 
+# this zshrc requires a locally stored environment variable #
+# named $HOME to account for different home dir paths       #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
