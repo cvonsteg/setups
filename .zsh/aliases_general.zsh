@@ -8,6 +8,7 @@ alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance
 alias xo="xdg-open"
 alias setup="cd ~/gitRepos/cvonsteg/setups"
 alias zshup="cd $HOME/gitRepos/cvonsteg/setups && git pull && source $HOME/.zshrc && cd -"
+alias kernels="cd $HOME/.local/share/jupyter/kernels"
 
 # Functions
 function nwl () {
