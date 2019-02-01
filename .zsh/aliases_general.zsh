@@ -10,6 +10,7 @@ alias setup="cd ~/gitRepos/cvonsteg/setups"
 alias zshup="cd $HOME/gitRepos/cvonsteg/setups && git pull && source $HOME/.zshrc && cd -"
 alias kernels="cd $HOME/.local/share/jupyter/kernels"
 alias sauce="source $HOME/.zshrc"
+alias gbd="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 
 # Functions
 function nwl () {
