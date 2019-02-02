@@ -2,11 +2,11 @@
 
 # Aliases 
 alias py="python3"
-alias vzp="vim ~/.zshrc"
-alias vzt="vim ~/.oh-my-zsh/themes/tino.zsh-theme"
+alias vzp="vim $HOME/.zshrc"
+alias vzt="vim $HOME/oh-my-zsh/themes/tino.zsh-theme"
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias xo="xdg-open"
-alias setup="cd ~/gitRepos/cvonsteg/setups"
+alias setup="cd $HOME/gitRepos/cvonsteg/setups"
 alias zshup="cd $HOME/gitRepos/cvonsteg/setups && git pull && source $HOME/.zshrc && cd -"
 alias kernels="cd $HOME/.local/share/jupyter/kernels"
 alias sauce="source $HOME/.zshrc"
