@@ -59,29 +59,3 @@ function pykernel() {
 }
 
 
-function pgs () {
-    environ=$1
-    db=$2
-
-    if [ $environ = 'prod' ]; 
-    then
-        ACCESS_HOST=$PROD_HOST
-        ACCESS_PWD=$PROD_PASS
-    elif [ $environ = 'dev' ];
-    then
-        ACCESS_HOST=$DB_HOST
-        ACCESS_PWD=$DB_PASS
-    else
-        echo "Please specify environment 'prod' or 'dev'"
-    fi 
-    
-    if [ -z "$ACCESS_HOST" ] || [ -z "$ACCESS_PWD" ];
-    then
-        set -e
-    else
-        echo "Connecting to RDS $environ.$db ..."
-
-        export PGPASSWORD=$ACCESS_PWD 
-        psql -h $ACCESS_HOST -U $DB_USER -p 5432 -d $db 
-    fi
-}
