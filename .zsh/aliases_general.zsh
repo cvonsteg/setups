@@ -4,6 +4,7 @@
 alias py="python3"
 alias vzp="vim $HOME/.zshrc"
 alias vzt="vim $HOME/oh-my-zsh/themes/tino.zsh-theme"
+alias val="vim $HOME/.aliases/aliases_general.zsh"
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias xo="xdg-open"
 alias setup="cd $HOME/gitRepos/cvonsteg/setups"
