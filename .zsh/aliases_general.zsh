@@ -59,4 +59,7 @@ function pykernel() {
     ipython kernel install --user --name=${1:-$default_name}
 }
 
+function here() {
+    l | grep $1
+}
 
