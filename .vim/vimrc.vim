@@ -415,3 +415,4 @@ let g:airline#extensions#whitespace#enabled = 0
 
 " Custom keybinding:
 imap jj <Esc>
+set bs=2
