@@ -89,8 +89,8 @@ Plug 't9md/vim-choosewin'
 " ale to replace ^
 Plug 'w0rp/ale'
 " Python syntax highligher
-Plug 'vim-python/python-syntax'
-let g:python_highlight_all = 1
+" Plug 'vim-python/python-syntax'
+" let g:python_highlight_all = 1
 " Paint css colors with the real color
 Plug 'lilydjwg/colorizer'
 " Ack code search (requires ack installed in the system)
