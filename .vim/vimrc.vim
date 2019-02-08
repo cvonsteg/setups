@@ -47,7 +47,7 @@ Plug 'fisadev/vim-ctrlp-cmdpalette'
 " Zen coding
 " Plug 'mattn/emmet-vim'
 " Git integration
-Plug 'motemen/git-vim'
+" Plug 'motemen/git-vim'
 " Tab list panel
 " Plug 'kien/tabman.vim'
 " Airline
@@ -87,7 +87,7 @@ Plug 't9md/vim-choosewin'
 " Python and other languages code checker
 " Plug 'scrooloose/syntastic'
 " ale to replace ^
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 " Python syntax highligher
 " Plug 'vim-python/python-syntax'
 " let g:python_highlight_all = 1
@@ -416,3 +416,4 @@ let g:airline#extensions#whitespace#enabled = 0
 " Custom keybinding:
 imap jj <Esc>
 set bs=2
+nmap <C-c> I# <esc>
