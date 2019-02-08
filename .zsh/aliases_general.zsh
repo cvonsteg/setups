@@ -13,6 +13,7 @@ alias zshup="cd $HOME/gitRepos/cvonsteg/setups && git pull && source $HOME/.zshr
 alias kernels="cd $HOME/.local/share/jupyter/kernels"
 alias sauce="source $HOME/.zshrc"
 alias branchcheck="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+alias osg="/usr/bin/google-chrome https://ohshitgit.com/ -d"
 
 # Functions
 function nwl () {
@@ -60,7 +61,7 @@ function pykernel() {
     ipython kernel install --user --name=${1:-$default_name}
 }
 
-function here() {
-    l | grep $1
+function showme() {
+    ls -la | grep $1
 }
 
