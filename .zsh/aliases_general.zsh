@@ -13,7 +13,7 @@ alias zshup="cd $HOME/gitRepos/cvonsteg/setups && git pull && source $HOME/.zshr
 alias kernels="cd $HOME/.local/share/jupyter/kernels"
 alias sauce="source $HOME/.zshrc"
 alias branchcheck="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
-alias osg="/usr/bin/google-chrome https://ohshitgit.com/ -d"
+alias osg="chrome https://ohshitgit.com/ -d"
 
 # Functions
 function nwl () {
