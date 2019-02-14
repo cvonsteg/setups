@@ -68,7 +68,7 @@ Plug 'Townk/vim-autoclose'
 " Indentation based movements
 " Plug 'jeetsukumaran/vim-indentwise'
 " Python autocompletion, go to definition.
-Plug 'davidhalter/jedi-vim'
+ Plug 'davidhalter/jedi-vim'
 " Better autocompletion
 Plug 'Shougo/neocomplcache.vim'
 " Snippets manager (SnipMate), dependencies, and snippets repo
