@@ -14,6 +14,7 @@ alias kernels="cd $HOME/.local/share/jupyter/kernels"
 alias sauce="source $HOME/.zshrc"
 alias branchcheck="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 alias osg="chrome https://ohshitgit.com/ -d"
+alias dcf="docker-compose -f"
 
 # Functions
 function nwl () {
