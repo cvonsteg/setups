@@ -417,3 +417,4 @@ highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 imap jj <Esc>
 set bs=2
 nmap <C-c> I# <esc>
+set showmatch
