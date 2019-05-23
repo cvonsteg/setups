@@ -68,10 +68,11 @@ function showme() {
 
 # Lazy type testing
 function meinpy() {
-	dicts_to_check=($(ls -d */ | grep -v '__pycache__/|scratch/|logs/'))
+	dicts_to_check=($(ls -d */ | grep -v '__pycache__/\|scratch/\|logs/\|vendor/\|scripts/\|notebooks/\|docker/\|batch/'))
 	for i in "${dicts_to_check[@]}";
 	do
-		printf "Type checking $i..."
+		printf "Checking $i: \n"
+        printf "-> \t"
 	       	mypy --ignore-missing-imports "$i"
 		printf "\n"
 	done
@@ -80,12 +81,12 @@ function meinpy() {
 
 # Python testing/checking dry-run
 function bauhaus() {
-    echo "--- Running Type Checker --- "
-	meinpy
-    echo "--- Type Checking complete ---"
-    echo "--- Running Nosetests ---"
-	nosetests -d
-    echo "--- Nosetests complete ---"
+    printf " ----- Running Type Checker ----- \n"
+	    meinpy
+    printf "\n"
+
+    printf " ----- Running Nosetests ----- \n"
+        nosetests -d
 }
 
 function pi() {
