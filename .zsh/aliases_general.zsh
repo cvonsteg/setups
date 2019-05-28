@@ -93,3 +93,7 @@ function bauhaus() {
 function pi() {
     ssh pi@192.168.1.99
 }
+
+function unzip() {
+    tar -zxvf "$1"
+}

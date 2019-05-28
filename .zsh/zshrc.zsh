@@ -39,3 +39,6 @@ source $ZSH/oh-my-zsh.sh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /snap/terraform/216/bin/terraform terraform
