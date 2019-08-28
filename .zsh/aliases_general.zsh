@@ -16,6 +16,22 @@ alias branchcheck="git for-each-ref --sort=-committerdate refs/heads/ --format='
 alias osg="chrome https://ohshitgit.com/ -d"
 alias dcf="docker-compose -f"
 alias root="sudo -s"
+# alias diff="git diff --src-prefix=local/ --dst-prefix=comp/"
+
+function gitdiff() {
+    if [ "$#" -eq 1 ]; then
+       this_branch=$(git symbolic-ref --short HEAD)
+       comp_branch=$1
+    # elif [ "$#" -eq 2 ]; then
+        # this_branch=$1
+        # comp_branch=$2
+    elif [ "$#" -gt 1 ]; then
+        echo "Too many args"
+        exit 1
+    fi
+
+    git diff --src-prefix="$this_branch/" --dst-prefix="$comp_branch/" $comp_branch
+}
 
 # Functions
 function nwl () {
@@ -37,6 +53,9 @@ function init_venv() {
   pip install wheel
   if [ -f requirements.txt ]; then
     pip install -r requirements.txt
+  fi
+  if [ -f requirements_dev.txt ]; then
+    pip install -r requirements_dev.txt
   fi
 }
 
@@ -88,12 +107,21 @@ function bauhaus() {
 
     printf " ----- Running Nosetests ----- \n"
         nosetests -d
+    printf " ----- Nosetests Complete ----- \n"
 }
 
 function pi() {
     ssh pi@192.168.1.99
 }
 
-function unzip() {
+function tar_unzip() {
     tar -zxvf "$1"
+}
+
+function delete_dangling() {
+    docker rmi $(docker images -qa -f 'dangling=true')
+}
+
+function gcv() {
+    git clone git@github.com:V0RT3X4/$1.git
 }
