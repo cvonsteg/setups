@@ -38,10 +38,12 @@ function nwl () {
     nosetests --nocapture $1
 }
 
+# TODO: Make linux only
 function copyvar () {
     echo -n $1 | xclip -selection clipboard    
 }
 
+# TODO: Make linux only
 function copycat () {
     cat $1 | xclip -selection clipboard
 }
@@ -110,10 +112,7 @@ function bauhaus() {
     printf " ----- Nosetests Complete ----- \n"
 }
 
-function pi() {
-    ssh pi@192.168.1.99
-}
-
+# TODO: should be linux only
 function tar_unzip() {
     tar -zxvf "$1"
 }
@@ -122,6 +121,3 @@ function delete_dangling() {
     docker rmi $(docker images -qa -f 'dangling=true')
 }
 
-function gcv() {
-    git clone git@github.com:V0RT3X4/$1.git
-}
