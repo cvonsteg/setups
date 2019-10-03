@@ -43,3 +43,5 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /snap/terraform/216/bin/terraform terraform
 
 complete -o nospace -C /usr/local/bin/terraform terraform
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

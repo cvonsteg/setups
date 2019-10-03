@@ -7,16 +7,18 @@ alias vzt="vim $HOME/oh-my-zsh/themes/tino.zsh-theme"
 alias val="vim $HOME/.aliases/aliases_general.zsh"
 alias vrc="vim $HOME/.vimrc"
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
-alias xo="xdg-open"
 alias setup="cd $HOME/gitRepos/cvonsteg/setups"
 alias zshup="cd $HOME/gitRepos/cvonsteg/setups && git pull && source $HOME/.zshrc && cd -"
-alias kernels="cd $HOME/.local/share/jupyter/kernels"
 alias sauce="source $HOME/.zshrc"
 alias branchcheck="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 alias osg="chrome https://ohshitgit.com/ -d"
 alias dcf="docker-compose -f"
 alias root="sudo -s"
-# alias diff="git diff --src-prefix=local/ --dst-prefix=comp/"
+alias f="fzf-tmux"
+
+function fv() {
+    vim $(f)
+}
 
 function gitdiff() {
     if [ "$#" -eq 1 ]; then
@@ -36,16 +38,6 @@ function gitdiff() {
 # Functions
 function nwl () {
     nosetests --nocapture $1
-}
-
-# TODO: Make linux only
-function copyvar () {
-    echo -n $1 | xclip -selection clipboard    
-}
-
-# TODO: Make linux only
-function copycat () {
-    cat $1 | xclip -selection clipboard
 }
 
 function init_venv() {
@@ -112,10 +104,6 @@ function bauhaus() {
     printf " ----- Nosetests Complete ----- \n"
 }
 
-# TODO: should be linux only
-function tar_unzip() {
-    tar -zxvf "$1"
-}
 
 function delete_dangling() {
     docker rmi $(docker images -qa -f 'dangling=true')
