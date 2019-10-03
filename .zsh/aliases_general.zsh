@@ -14,11 +14,8 @@ alias branchcheck="git for-each-ref --sort=-committerdate refs/heads/ --format='
 alias osg="chrome https://ohshitgit.com/ -d"
 alias dcf="docker-compose -f"
 alias root="sudo -s"
-alias f="fzf-tmux"
+alias f="fzf-tmux --ansi --color=dark"
 
-function fv() {
-    vim $(f)
-}
 
 function gitdiff() {
     if [ "$#" -eq 1 ]; then
