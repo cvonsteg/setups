@@ -15,6 +15,7 @@ alias osg="chrome https://ohshitgit.com/ -d"
 alias dcf="docker-compose -f"
 alias root="sudo -s"
 alias f="fzf-tmux --ansi --color=dark"
+alias vf='vim -o "$(f)"'
 
 
 function gitdiff() {
