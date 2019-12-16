@@ -22,6 +22,11 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# for aws-iam-authenticator
+export PATH=$HOME/bin:$PATH
+
+export PATH=$HOME/.local/bin:$PATH
+
 source $ZSH/oh-my-zsh.sh
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -45,3 +50,16 @@ complete -o nospace -C /snap/terraform/216/bin/terraform terraform
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+eval "$(pyenv virtualenv-init -)"
+
+FILE=$HOME/.bash_profile
+if [ -f "$FILE" ]; then
+    source $FILE
+fi
+
+

@@ -16,6 +16,9 @@ alias dcf="docker-compose -f"
 alias root="sudo -s"
 alias f="fzf-tmux --ansi --color=dark"
 alias vf='vim -o "$(f)"'
+alias fupycharm="ibus-daemon -rd"
+alias pyt="py.test -W ignore tests/"
+alias ltr="ls -ltr"
 
 
 function gitdiff() {
@@ -65,10 +68,6 @@ function venv() {
 }
 
 function pykernel() {
-    if [ ! -a "$VIRTUAL_ENV" ]
-    then 
-        venv .venv
-    fi
     default_name=${PWD##*/}
     pip install ipykernel
     ipython kernel install --user --name=${1:-$default_name}
