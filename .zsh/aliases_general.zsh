@@ -18,7 +18,7 @@ alias f="fzf-tmux --ansi --color=dark"
 alias vf='vim -o "$(f)"'
 alias fupycharm="ibus-daemon -rd"
 alias pyt="py.test -W ignore tests/"
-alias ltr="ls -ltr"
+alias ltr="la -ltr"
 
 
 function gitdiff() {
