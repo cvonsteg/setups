@@ -117,6 +117,9 @@ Plug 'vim-scripts/Wombat'
 " Yank history navigation
 Plug 'vim-scripts/YankRing.vim'
 
+" Black code formatting tool for python 
+Plug 'psf/black'
+
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
 
