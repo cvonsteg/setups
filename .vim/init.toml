@@ -43,10 +43,10 @@
     escape_key_binding = 'jj'
 
 # Enable autocomplete layer
-[[layers]]
-  name = 'autocomplete'
-  auto_completion_return_key_behavior = 'complete'
-  auto_completion_tab_key_behavior = 'cycle'
+# [[layers]]
+# name = 'autocomplete'
+# auto_completion_return_key_behavior = 'complete'
+# auto_completion_tab_key_behavior = 'cycle'
 
 [[layers]]
   name = 'colorscheme'
@@ -56,9 +56,9 @@
   default_position = 'bottom'
   default_height = 30
 
-[[layers]]
-  name = 'lang#python'
-  enable_typeinfo = true
+# [[layers]]
+# name = 'lang#python'
+# enable_typeinfo = true
 
 [[layers]]
   name = 'lang#rust'
@@ -74,3 +74,7 @@
 [[custom_plugins]]
 name = 'dbeniamine/cheat.sh-vim'
 merged = 0
+
+[[custom_plugins]]
+name = 'neoclide/coc.nvim'
+
