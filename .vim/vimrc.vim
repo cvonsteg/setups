@@ -70,7 +70,7 @@ Plug 'tpope/vim-surround'
 " Python autocompletion, go to definition.
 " Plug 'davidhalter/jedi-vim'
 " Better autocompletion
-Plug 'Shougo/neocomplcache.vim'
+" Plug 'Shougo/neocomplcache.vim'
 " Snippets manager (SnipMate), dependencies, and snippets repo
 " Plug 'MarcWeber/vim-addon-mw-utils'
 " Plug 'tomtom/tlib_vim'
@@ -78,7 +78,7 @@ Plug 'Shougo/neocomplcache.vim'
 " Plug 'garbas/vim-snipmate'
 " Git/mercurial/others diff icons on the side of the file lines
 " Plug 'mhinz/vim-signify'
-" Automatically sort python imports
+" Automatically sort delek imports
 Plug 'fisadev/vim-isort'
 " Drag visual blocks arround
 " Plug 'fisadev/dragvisuals.vim'
@@ -89,8 +89,8 @@ Plug 'fisadev/vim-isort'
 " ale to replace ^
 " Plug 'w0rp/ale'
 " Python syntax highligher
-" Plug 'vim-python/python-syntax'
-" let g:python_highlight_all = 1
+Plug 'vim-python/python-syntax'
+let g:python_highlight_all = 1
 " Paint css colors with the real color
 Plug 'lilydjwg/colorizer'
 " Ack code search (requires ack installed in the system)
@@ -99,6 +99,7 @@ if has('python')
     " YAPF formatter for Python
     Plug 'pignacio/vim-yapf-format'
 endif
+Plug 'ncm2/ncm2'
 " Relative numbering of lines (0 is the current line)
 " (disabled by default because is very intrusive and can't be easily toggled
 " on/off. When the plugin is present, will always activate the relative 
@@ -165,7 +166,7 @@ set hlsearch
 syntax on
 
 " show line numbers
-set nu
+set nu rnu
 
 " tab navigation mappings
 " map tn :tabn<CR>
@@ -204,17 +205,19 @@ nmap ,r :Ack
 nmap ,wr :Ack <cword><CR>
 
 " use 256 colors when possible
-"if (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256') || has('nvim')
-	"let &t_Co = 256
-    "colorscheme fisa
-"else
-    "colorscheme delek
-"endif
+if (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256') || has('nvim')
+	let &t_Co = 256
+    colorscheme delek
+else
+    colorscheme delek
+endif
 
 " colors for gvim
-"if has('gui_running')
-    "colorscheme wombat
-"endif
+" if has('gui_running')
+    " colorscheme delek
+" endif
+
+" set colorscheme=delek
 
 " when scrolling, keep cursor 3 lines away from screen border
 set scrolloff=3

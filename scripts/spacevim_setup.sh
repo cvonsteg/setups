@@ -11,6 +11,6 @@ if [[ ! -z $GIT_CVONSTEG ]]; then
 else
   echo "Please define the location of your personal git repo (will be stored as GIT_CVONSTEG)"
   read personal_git_path
-  ln -s $personal_git_path/setups/.vim/init.toml $HOME/.SpaceVim.d/inti.toml 
+  ln -s $personal_git_path/setups/.vim/init.toml $HOME/.SpaceVim.d/init.toml 
 fi
 

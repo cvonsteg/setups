@@ -5,10 +5,11 @@ alias py="python3"
 alias vzp="vim $HOME/.zshrc"
 alias vzt="vim $HOME/oh-my-zsh/themes/tino.zsh-theme"
 alias val="vim $HOME/.aliases/aliases_general.zsh"
+alias valac="vim $HOME/.config/alacritty/alacritty.yml"
 alias vrc="vim $HOME/.vimrc"
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
-alias setup="cd $HOME/gitRepos/cvonsteg/setups"
-alias zshup="cd $HOME/gitRepos/cvonsteg/setups && git pull && source $HOME/.zshrc && cd -"
+alias setup="cd $GIT_PERSONAL/setups"
+alias zshup="cd $GIT_PERSONAL/setups && git pull && source $HOME/.zshrc && cd -"
 alias sauce="source $HOME/.zshrc"
 alias branchcheck="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 alias osg="chrome https://ohshitgit.com/ -d"
@@ -19,7 +20,17 @@ alias vf='vim -o "$(f)"'
 alias fupycharm="ibus-daemon -rd"
 alias pyt="py.test -W ignore tests/"
 alias ltr="la -ltr"
+alias ifetch="brctl download"
+alias standup="echo 82890988002 | pbcopy"
+alias rust-ant="open https://github.com/brson/rust-anthology/blob/master/master-list.md"
 
+function zoom () {
+  open "zoommtg://zoom.us/join?$1"
+}
+
+function joinStandup () {
+  zoom standup
+}
 
 function gitdiff() {
     if [ "$#" -eq 1 ]; then
@@ -106,3 +117,15 @@ function delete_dangling() {
     docker rmi $(docker images -qa -f 'dangling=true')
 }
 
+function cheat() {
+  curl cheat.sh/${1}
+}
+
+function rustbook() {
+  loc=$HOME/coding/rust/book/book/index.html 
+  open -a "Google Chrome" $loc
+}
+
+function pygrep() {
+  grep -r $1 . --include=\*.py --exclude-dir=vendor --exclude=\*.pyc
+}
