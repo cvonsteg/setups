@@ -17,19 +17,16 @@ alias dcf="docker-compose -f"
 alias root="sudo -s"
 alias f="fzf-tmux --ansi --color=dark"
 alias vf='vim -o "$(f)"'
-alias fupycharm="ibus-daemon -rd"
 alias pyt="py.test -W ignore tests/"
 alias ltr="la -ltr"
 alias ifetch="brctl download"
-alias standup="echo 82890988002 | pbcopy"
 alias rust-ant="open https://github.com/brson/rust-anthology/blob/master/master-list.md"
 
-function zoom () {
-  open "zoommtg://zoom.us/join?$1"
-}
 
-function joinStandup () {
-  zoom standup
+function mkmodule () {
+  module=$1
+  mkdir "$module"
+  touch "$module/__init__.py"
 }
 
 function gitdiff() {
@@ -54,7 +51,7 @@ function nwl () {
 
 function init_venv() {
   venv_dir=$1
-  python3.7 -m venv "$venv_dir"
+  python -m venv "$venv_dir"
   venv "$venv_dir"
   pip install wheel
   if [ -f requirements.txt ]; then
@@ -129,3 +126,4 @@ function rustbook() {
 function pygrep() {
   grep -r $1 . --include=\*.py --exclude-dir=vendor --exclude=\*.pyc
 }
+
