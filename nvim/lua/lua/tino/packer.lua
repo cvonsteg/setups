@@ -1,4 +1,6 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+vim.keymap.set('n', '<leader>.', vim.cmd.sp)
+vim.keymap.set('n', '<leader>/', vim.cmd.vsp)
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
@@ -12,6 +14,10 @@ return require('packer').startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
@@ -52,6 +58,11 @@ return require('packer').startup(function(use)
 	use('vim-airline/vim-airline')
 	-- Airline themes
 	use('vim-airline/vim-airline-themes')
+    -- lualine
+    -- use {
+    --     'nvim-lualine/lualine.nvim',
+    --     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    -- }
 	use({
 		"klen/nvim-test",
 		config = function()
@@ -67,13 +78,28 @@ return require('packer').startup(function(use)
             require("bufferline").setup()
         end
     })
-
-    use ({
-        'yorickpeterse/happy_hacking.vim',
+    -- hop for quick-find
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
         config = function()
-            vim.cmd('colorscheme happy_hacking')
+            -- you can configure Hop the way you like here; see :h hop-config
+            require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
         end
+    }
+
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
     })
+    use('matbme/JABS.nvim')
+
+    -- use ({
+    --     'yorickpeterse/happy_hacking.vim',
+    --     config = function()
+    --         vim.cmd('colorscheme happy_hacking')
+    --     end
+    -- })
 
 end)
 

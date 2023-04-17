@@ -1,2 +1,1 @@
--- vim.cmd('colorscheme onedarker')
--- vim.cmd('colorscheme happy_hacking')
+vim.cmd('colorscheme onedarker')
