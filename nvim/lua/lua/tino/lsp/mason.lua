@@ -13,7 +13,7 @@
 local servers = {
   "lua_ls",
 	"pyright",
-	-- "rust_analyzer",
+	"rust_analyzer",
 }
 
 local settings = {
