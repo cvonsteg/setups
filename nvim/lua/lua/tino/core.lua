@@ -27,3 +27,15 @@ opt.splitbelow = true
 vim.g.mapleader = " "
 vim.g.highlightedyank_highlight_duration = 400
 
+local options = { noremap = true }
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("i", "jj", "<ESC>", options)
+vim.keymap.set('n', '<leader>.', vim.cmd.sp)
+vim.keymap.set('n', '<leader>/', vim.cmd.vsp)
+-- quick save
+vim.keymap.set('n', '<C-s>', vim.cmd.w)
+-- buffers
+vim.keymap.set('n', 'bd', vim.cmd.bdelete)
+vim.keymap.set('n', 'bn', vim.cmd.bnext)
+vim.keymap.set('n', 'bp', vim.cmd.bprev)
+

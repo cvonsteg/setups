@@ -6,6 +6,9 @@ local fb_actions = require "telescope".extensions.file_browser.actions
 require("telescope").setup {
     extensions = {
         file_browser = {
+            initial_mode = "normal",
+            prompt_prefix = "$ ",
+            selection_caret = "-> ",
             theme = "ivy",
             -- disables netrw and use telescope-file-browser in its place
             hijack_netrw = true,

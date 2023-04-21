@@ -1,7 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-vim.keymap.set('n', '<leader>.', vim.cmd.sp)
-vim.keymap.set('n', '<leader>/', vim.cmd.vsp)
-
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
@@ -93,6 +89,8 @@ return require('packer').startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
     use('matbme/JABS.nvim')
+    use("williamboman/mason.nvim") -- simple to use language server installer
+    use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
 
     -- use ({
     --     'yorickpeterse/happy_hacking.vim',
