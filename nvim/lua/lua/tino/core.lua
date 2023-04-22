@@ -28,7 +28,7 @@ opt.formatoptions:remove('cro')
 
 vim.g.mapleader = " "
 vim.g.highlightedyank_highlight_duration = 400
-
+-- disable comments auto-continuing on next line
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 
