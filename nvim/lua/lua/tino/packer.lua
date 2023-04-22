@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+    -- netrw replacement
     use {
         "nvim-telescope/telescope-file-browser.nvim",
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
@@ -55,11 +56,7 @@ return require('packer').startup(function(use)
 	use('vim-airline/vim-airline')
 	-- Airline themes
 	use('vim-airline/vim-airline-themes')
-    -- lualine
-    -- use {
-    --     'nvim-lualine/lualine.nvim',
-    --     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    -- }
+    -- testing framework
 	use({
 		"klen/nvim-test",
 		config = function()
@@ -92,13 +89,6 @@ return require('packer').startup(function(use)
     use('matbme/JABS.nvim')
     use("williamboman/mason.nvim") -- simple to use language server installer
     use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
-
-    -- use ({
-    --     'yorickpeterse/happy_hacking.vim',
-    --     config = function()
-    --         vim.cmd('colorscheme happy_hacking')
-    --     end
-    -- })
 
 end)
 
