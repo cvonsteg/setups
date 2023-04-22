@@ -24,8 +24,13 @@ opt.scrolloff =  8
 opt.splitright = true
 opt.splitbelow = true
 
+opt.formatoptions:remove('cro')
+
 vim.g.mapleader = " "
 vim.g.highlightedyank_highlight_duration = 400
+
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 
 local options = { noremap = true }
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)

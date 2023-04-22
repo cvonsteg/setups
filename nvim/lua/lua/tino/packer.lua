@@ -1,3 +1,4 @@
+vim.keymap.set('n', '<leader>sy', vim.cmd.PackerSync)
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
