@@ -19,7 +19,9 @@ require("telescope").setup {
                 ["n"] = {
                     -- your custom normal mode mappings
                     ['-'] = fb_actions.backspace,
-                    ['%'] = fb_actions.create
+                    ['%'] = fb_actions.create,
+                    ['ss'] = fb_actions.sort_by_size,
+                    ['sd'] = fb_actions.sort_by_date,
                 },
             },
         },

@@ -21,6 +21,8 @@ alias pyt="py.test -W ignore tests/"
 alias ltr="la -ltr"
 alias ifetch="brctl download"
 alias rust-ant="open https://github.com/brson/rust-anthology/blob/master/master-list.md"
+alias tilingon="brew services start yabai && brew services start skhd"
+alias tilingoff="brew services stop yabai && brew services stop skhd"
 
 
 function mkmodule () {

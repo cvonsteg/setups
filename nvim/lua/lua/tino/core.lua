@@ -44,3 +44,6 @@ vim.keymap.set('n', 'bd', vim.cmd.bdelete)
 vim.keymap.set('n', 'bn', vim.cmd.bnext)
 vim.keymap.set('n', 'bp', vim.cmd.bprev)
 
+vim.api.nvim_set_keymap('n', '<leader>cr', ":!cargo run<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>ct', ":!cargo test<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>pr', ":!python %:t:r.py <CR>", { noremap = true })

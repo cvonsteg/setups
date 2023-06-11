@@ -48,7 +48,10 @@ return require('packer').startup(function(use)
 	use('hrsh7th/vim-vsnip')
 	-- Adds extra functionality over rust analyzer
 	use("simrat39/rust-tools.nvim")
+    -- themes
 	use("lunarvim/Onedarker.nvim")
+	use("sainnhe/gruvbox-material")
+	use("sainnhe/everforest")
 	-- use('scrooloose/nerdtree')
 	use('jiangmiao/auto-pairs')
 	use('machakann/vim-highlightedyank')
