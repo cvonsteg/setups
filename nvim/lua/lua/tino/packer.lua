@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
 	use('tpope/vim-fugitive')
 	-- lsp setup
 	use("neovim/nvim-lspconfig")
+    use("folke/trouble.nvim")
 	-- Visualize lsp progress
 	use({
 		"j-hui/fidget.nvim",
@@ -92,6 +93,8 @@ return require('packer').startup(function(use)
     use('matbme/JABS.nvim')
     use("williamboman/mason.nvim") -- simple to use language server installer
     use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
+    -- debugger
+    use("mfussenegger/nvim-dap")
 
 end)
 

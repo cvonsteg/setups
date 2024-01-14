@@ -25,6 +25,7 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.formatoptions:remove('cro')
+opt.termguicolors = true
 
 vim.g.mapleader = " "
 vim.g.highlightedyank_highlight_duration = 400
@@ -47,3 +48,9 @@ vim.keymap.set('n', 'bp', vim.cmd.bprev)
 vim.api.nvim_set_keymap('n', '<leader>cr', ":!cargo run<CR>", { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>ct', ":!cargo test<CR>", { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>pr', ":!python %:t:r.py <CR>", { noremap = true })
+
+-- trouble
+vim.keymap.set("n", "<leader>is", "<cmd>TroubleToggle<cr>",
+  {silent = true, noremap = true}
+)
+
