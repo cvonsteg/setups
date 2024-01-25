@@ -1,0 +1,77 @@
+{
+  "editor.lineNumbers": "relative",
+  "files.autoSave": "onFocusChange",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<Space>",
+        "p",
+        "v"
+      ],
+      "commands": [
+        "vsnetrw.open"
+      ],
+      "when": "editorLangId != vsnetrw"
+    },
+    {
+      "before": [
+        "<Space>",
+        "a"
+      ],
+      "commands": [
+        "vscode-harpoon.addEditor"
+      ]
+    },
+    {
+      "before": [
+        "<Space>",
+        "e"
+      ],
+      "commands": [
+        "vscode-harpoon.editorQuickPick"
+      ]
+    }
+  ],
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 400,
+  "vim.smartRelativeLine": true,
+  "vim.sneak": true,
+  "vim.useSystemClipboard": true,
+  "vim.vimrc.enable": true,
+  "workbench.startupEditor": "none",
+  "autoDocstring.guessTypes": false,
+  "autoDocstring.docstringFormat": "numpy-notypes",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.env.linux": {},
+  "workbench.iconTheme": "material-icon-theme",
+  "python.analysis.stubPath": "src/stubs",
+  "[rust]": {
+    "editor.formatOnSave": true,
+  },
+  "editor.inlineSuggest.enabled": true,
+  "[python]": {
+    "editor.formatOnType": true,
+  },
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black",
+  "editor.stickyScroll.enabled": true,
+  "jupyter.debugJustMyCode": false,
+  "python.analysis.exclude": [
+    ".git",
+    "**/__pycache__",
+    ".venv",
+    "**/node_modules"
+  ],
+  "window.menuBarVisibility": "compact"
+}
